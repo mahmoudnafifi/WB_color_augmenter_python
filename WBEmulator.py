@@ -32,7 +32,6 @@ class WBEmulator:
       folder = 'WB_color_augmenter_python/'
     else:
       folder = './'
-    print(folder)
     self.features = np.load(folder + 'features.npy')
     # mapping functions to emulate WB effects
     self.mappingFuncs = np.load(folder + 'mappingFuncs.npy')
