@@ -1,6 +1,9 @@
 # WB_color_augmenter_python
 Python version of the WB augmenter (ICCV'19)
-Please check the official repo from [here](https://github.com/mahmoudnafifi/WB_color_augmenter) that includes both Matlab and Python code (including PyTorch example). This repo was created to facilitate cloning the Python version of the WB augmenter. 
+Please check the official repo from [here](https://github.com/mahmoudnafifi/WB_color_augmenter), which includes both Matlab and Python code (including PyTorch example). 
+
+
+This repo was created to facilitate cloning the Python version of the WB augmenter. 
 
 
 ### Publication
