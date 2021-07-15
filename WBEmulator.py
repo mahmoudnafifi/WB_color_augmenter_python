@@ -28,13 +28,18 @@ from math import ceil
 class WBEmulator:
   def __init__(self):
     # training encoded features
-    self.features = np.load('features.npy')
+    if os.path.split(os.getcwd())[-1] != 'WB_color_augmenter_python':
+      folder = 'WB_color_augmenter_python/'
+    else:
+      folder = './'
+    print(folder)
+    self.features = np.load(folder + 'features.npy')
     # mapping functions to emulate WB effects
-    self.mappingFuncs = np.load('mappingFuncs.npy')
+    self.mappingFuncs = np.load(folder + 'mappingFuncs.npy')
     # weight matrix for histogram encoding
-    self.encoderWeights = np.load('encoderWeights.npy')
+    self.encoderWeights = np.load(folder + 'encoderWeights.npy')
     # bias vector for histogram encoding
-    self.encoderBias = np.load('encoderBias.npy')
+    self.encoderBias = np.load(folder + 'encoderBias.npy')
     self.h = 60  # histogram bin width
     self.K = 25  # K value for nearest neighbor searching
     self.sigma = 0.25  # fall off factor for KNN
